@@ -119,6 +119,73 @@ This is Go.`
 
 ---
 
+In Go, **typed literals** refer to literals that are explicitly assigned a type during their definition or initialization. When you specify the type of a literal, it becomes "typed." This contrasts with **untyped literals**, which don't have a specific type until they are assigned to a variable or used in a context that requires a specific type.
+
+### Examples of Typed Literals
+
+Here are some cases of explicitly **typed literals**:
+
+#### Integer Example
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var typedInt int32 = 42 // explicitly specifying int32
+    fmt.Printf("typedInt: %T\n", typedInt)
+}
+```
+In this case, the literal `42` is typed as `int32`.
+
+#### Floating-Point Example
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var typedFloat float32 = 3.14 // explicitly specifying float32
+    fmt.Printf("typedFloat: %T\n", typedFloat)
+}
+```
+Here, the literal `3.14` is typed as `float32`.
+
+#### Rune Example
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var typedRune rune = 'A' // explicitly specifying rune
+    fmt.Printf("typedRune: %T\n", typedRune)
+}
+```
+The rune literal `'A'` is typed as `rune`.
+
+#### String Example
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var typedString string = "Hello, World!" // explicitly specifying string
+    fmt.Printf("typedString: %T\n", typedString)
+}
+```
+The string literal `"Hello, World!"` is typed as `string`.
+
+### Key Difference Between Typed and Untyped Literals
+- **Untyped literals** take on a default type only when needed (e.g., when assigned to a variable or used in an expression).
+- **Typed literals** have their type explicitly declared, either by assignment to a variable of a specific type or by type casting.
+
+### Why is This Important?
+Typed literals give you more control over the behavior of your code. For instance, when working with type-specific operations or interfacing with functions expecting particular types, specifying the literal type ensures compatibility and avoids unintended type promotion or type mismatch errors.
+
+
+
 ### **Untyped Literals**
 Go literals are considered untyped until assigned to a variable. The default types are:
 - Integer literals: `int`
